@@ -1,6 +1,7 @@
 package Pro;
 
 /**
+ * 不可new抽象类和接口
  * 抽象类可以声明抽象方法，也可直接实现方法，没有接口interface抽象
  * 并且实现抽象方法的方式为子类继承重写,必须重写(实现)抽象类中所有抽象方法
  * 在此应对照接口
@@ -20,7 +21,7 @@ public abstract class TestAbstract {
 	 * @param argvs
 	 */
 	public static void main(String[]argvs) {
-		MyClass mc = new MyClass();
+		TestAbstract mc = new MyClass();
 		mc.cry();
 		mc.getCry();
 	}

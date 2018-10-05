@@ -1,4 +1,6 @@
 package Pro;
+import java.io.Serializable;
+
 /**
  * 父类
  * @author 安迪
@@ -11,8 +13,12 @@ package Pro;
  *而对象的具体信息都存储在堆内存上，然后由栈上面的引用指向堆中对象的地址。
  */
 import Pro.Computer;
-public class Student {
+public class Student implements Comparable<Student>,Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//成员变量
 	String name;
 	int age;
@@ -20,6 +26,7 @@ public class Student {
 	Computer comp;
 	
 	static {                                   //static变量随着类的产生而存在，存在于堆方法区
+											   //可用于初始化类的静态成员变量
 		System.out.println("类的初始化！！");
 	}
 	
@@ -32,6 +39,10 @@ public class Student {
 		System.out.println("学生对象初始化完毕！");
 	}
 	
+	Student(String name,int age){
+		this.name = name;
+		this.age = age;
+	}
 	
 	//方法
 	void prinfo() {
@@ -50,6 +61,12 @@ public class Student {
 		System.out.println("我正在玩王者荣耀");
 	}
 	
+	/**
+	 * 
+	 */
+	public Student clone() {
+		return new Student();
+	}
 	//当前主函数
 	public static void main(String[] argvs) {
 		Student s = new Student();
@@ -59,5 +76,19 @@ public class Student {
 		s.comp.changeBrand("戴尔");
 		s.comp.changeValue(1234);
 		s.comp.prinfo();
+		System.out.println(s);
+
+		Student r = s.clone();
+		System.out.println(r);
+		Student s1 = new Student("Aline",22);
+		System.out.println(s1.compareTo(s));
+	}
+
+
+	@Override
+	public int compareTo(Student o) {
+		if(this.age == o.age)return 0;
+		if(this.age>o.age)return 1;
+		else return -1;
 	}
 }

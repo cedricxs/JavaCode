@@ -1,10 +1,17 @@
 package Pro;
+
+import java.io.Serializable;
+
 /**
  * 外部引用类和instanceof
  * @author 安迪
  *
  */
-public class Computer extends Object{
+public class Computer extends Object implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String brand;
 	int value;
 	

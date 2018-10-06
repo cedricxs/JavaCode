@@ -1,7 +1,6 @@
 package ChatRoom;
 
 import java.io.Closeable;
-import java.io.IOException;
 
 public class Util {
 	@SafeVarargs
@@ -9,8 +8,7 @@ public class Util {
 		for(Closeable t:io) {
 			try {
 				t.close();
-			} catch (IOException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
 			}
 		}
 	}

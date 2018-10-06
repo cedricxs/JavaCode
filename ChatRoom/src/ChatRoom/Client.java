@@ -7,7 +7,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
+/**
+ * 面向服务器的客户端，消息需通过服务器中转，不可点对点
+ * @author 安迪
+ *
+ */
 
 
 public class Client {

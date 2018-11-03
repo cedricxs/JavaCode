@@ -33,6 +33,7 @@ public class Client {
 			boolean loginstatus = false;
 			while(!loginstatus) {
 				synchronized(login) {
+					//这里应该锁住login，防止数据不同步
 					//不断读取登录状态直到登陆成功
 					loginstatus= login.loginsuccess;
 				}

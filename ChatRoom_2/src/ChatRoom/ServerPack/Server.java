@@ -68,6 +68,7 @@ public class Server {
 			//main线程为服务器主线程
 			//通信模式由客户端决定,因为是客户端与服务器建立连接
 			//客户端决定建立连接之后直接运行完程序，则通信管道Socket直接失效
+			//可分为持续链接和非持续链接状态,可参照HTTP请求/响应头的connect:alive
 			Socket socket = server.server.accept();
 			server.startChannel(socket);
 		}

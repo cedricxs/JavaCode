@@ -1,22 +1,22 @@
 package Pro;
 
 /**
- * ÖØĞ´map
- * µ×²ãÊµÏÖ£ºÊı×é+Á´±í
- * ±ØĞëÖØĞ´hasCode()ºÍequals()
- * Âú×ãequals()==trueµÄÁ½¸öÔªËØhashCode()Ò»¶¨ÏàµÈ!!!!
- * ËùÒÔ¼ì²éÖØ¸´Ö»Ğè¼ì²éÒ»¸ùÁ´±í¼´¿É
- * @author °²µÏ
- * ÖØĞ´·ºĞÍÊ±£¬Ò²¿É½«Entry<Object,Object>²¢Ö»¶ÔÍâ±©Â¶K£¬VÀàĞÍµÄput()·½·¨£¡£¡£¡
+ * é‡å†™map
+ * åº•å±‚å®ç°ï¼šæ•°ç»„+é“¾è¡¨
+ * å¿…é¡»é‡å†™hasCode()å’Œequals()
+ * æ»¡è¶³equals()==trueçš„ä¸¤ä¸ªå…ƒç´ hashCode()ä¸€å®šç›¸ç­‰!!!!
+ * æ‰€ä»¥æ£€æŸ¥é‡å¤åªéœ€æ£€æŸ¥ä¸€æ ¹é“¾è¡¨å³å¯
+ * @author å®‰è¿ª
+ * é‡å†™æ³›å‹æ—¶ï¼Œä¹Ÿå¯å°†Entry<Object,Object>å¹¶åªå¯¹å¤–æš´éœ²Kï¼ŒVç±»å‹çš„put()æ–¹æ³•ï¼ï¼ï¼
  *
  */
 public class MyMap<K,V> {
 	
-	//Ê¢·ÅÁ´±í
+	//ç››æ”¾é“¾è¡¨
 	final MyArrayList<MyLinkedList<Entry<K,V>>> content;
 	int count;
 	/**
-	 * ³õÊ¼»¯Êı×é³¤¶È£¬Ò»µ©³õÊ¼»¯£¬³¤¶È²»ÔÙ±ä
+	 * åˆå§‹åŒ–æ•°ç»„é•¿åº¦ï¼Œä¸€æ—¦åˆå§‹åŒ–ï¼Œé•¿åº¦ä¸å†å˜
 	 * @param size
 	 */
 	
@@ -30,7 +30,7 @@ public class MyMap<K,V> {
 	}
 	
 	/**
-	 * ÓÉKeyÖµµÄ¹şÏ£ÂëÈ·¶¨Î»ÖÃ£¬¿ÉÊµÏÖÖØ¸´Ôò¸²¸Ç
+	 * ç”±Keyå€¼çš„å“ˆå¸Œç ç¡®å®šä½ç½®ï¼Œå¯å®ç°é‡å¤åˆ™è¦†ç›–
 	 * @param key
 	 * @param value
 	 */
@@ -43,7 +43,7 @@ public class MyMap<K,V> {
 			content.setValueOf(list,a);
 		}
 		else {
-			//ÏàÍ¬keyÖµµÄhashCode()Ò²ÏàµÈ£¬ËùÒÔÍ¬Ò»keyÖµµÄEntry±ØÈ»ÔÚÎ»ÖÃÎªaµÄÁ´±íÉÏ!
+			//ç›¸åŒkeyå€¼çš„hashCode()ä¹Ÿç›¸ç­‰ï¼Œæ‰€ä»¥åŒä¸€keyå€¼çš„Entryå¿…ç„¶åœ¨ä½ç½®ä¸ºaçš„é“¾è¡¨ä¸Š!
 			MyLinkedList<Entry<K,V>> list = content.getValueOf(a);
 			if(!list.replace(t,t))
 				list.addWithHead(t);
@@ -52,7 +52,7 @@ public class MyMap<K,V> {
 	}
 	
 	/**
-	 * Ö¸¶¨keyÖµ·µ»ØÆäÖµ 
+	 * æŒ‡å®škeyå€¼è¿”å›å…¶å€¼ 
 	 * @param key
 	 * @param defaulted
 	 * @return
@@ -108,7 +108,7 @@ class Entry<K,V>{
 		if(any instanceof Entry) {
 			@SuppressWarnings("unchecked")
 			Entry<K,V> t = (Entry<K,V>)any;
-			if(t.key == this.key)
+			if(t.key.equals(this.key))
 				return true;
 		}
 		return false;

@@ -1,10 +1,10 @@
 package Pro;
 
 /**
- * Å×³öÒì³££¬ÖÕÖ¹ËùÊôÏß³ÌÔËĞĞ
- * @author °²µÏ
- * finally×Ü»áÔËĞĞ£¬²¢ÇÒÔÚfinally´æÔÚÊ±£¬¼´Ê¹ÔÚtryÖĞÒÑ¾­ÉùÃ÷·µ»ØÖµ£¬Ò²Ö»ÊÇ¶¨Îª·µ»ØÖµ,»á±»finallyÖĞµÄ·µ»ØÖµ¸²¸Ç
- * ÈôfinallyÖĞÎªÉùÃ÷·µ»ØÖµ²Å·µ»ØtryÖĞµÄ·µ»ØÖµ
+ * æŠ›å‡ºå¼‚å¸¸ï¼Œç»ˆæ­¢æ‰€å±çº¿ç¨‹è¿è¡Œ
+ * @author å®‰è¿ª
+ * finallyæ€»ä¼šè¿è¡Œï¼Œå¹¶ä¸”åœ¨finallyå­˜åœ¨æ—¶ï¼Œå³ä½¿åœ¨tryä¸­å·²ç»å£°æ˜è¿”å›å€¼ï¼Œä¹Ÿåªæ˜¯å®šä¸ºè¿”å›å€¼,ä¼šè¢«finallyä¸­çš„è¿”å›å€¼è¦†ç›–
+ * è‹¥finallyä¸­æœªå£°æ˜è¿”å›å€¼æ‰è¿”å›tryä¸­çš„è¿”å›å€¼
  *
  */
 public class TestException {
@@ -14,9 +14,9 @@ public class TestException {
 			//throw new Exception();
 		}catch(Exception e) {
 			e.printStackTrace();
-			//´Ë·½·¨´òÓ¡³ö³öÏÖÒì³£µÄ¶ÑÕ»(º¯Êıµ÷ÓÃ)Çé¿ö,²»»áÖĞÖ¹Ö÷Ïß³ÌÔËĞĞ
+			//æ­¤æ–¹æ³•æ‰“å°å‡ºå‡ºç°å¼‚å¸¸çš„å †æ ˆ(å‡½æ•°è°ƒç”¨)æƒ…å†µ,ä¸ä¼šä¸­æ­¢ä¸»çº¿ç¨‹è¿è¡Œ
 		}finally {
-			System.out.println("Òì³£±»²¶»ñÁË£¡");		
+			System.out.println("å¼‚å¸¸è¢«æ•è·äº†ï¼");		
 		}
 		
 		try {
@@ -29,7 +29,7 @@ public class TestException {
 		System.out.println(c);
 		System.out.println(mytry());
 	}
-	//ÉùÃ÷Å×³öËùÒÔ¿ÉÄÜ³öÏÖµÄÒì³££¬ÔÚ±ğÈËµ÷ÓÃÊ±£¬Ğètry/catch»ò¼ÌĞøÏòÉÏÅ×³öÒì³£
+	//å£°æ˜æŠ›å‡ºæ‰€ä»¥å¯èƒ½å‡ºç°çš„å¼‚å¸¸ï¼Œåœ¨åˆ«äººè°ƒç”¨æ—¶ï¼Œéœ€try/catchæˆ–ç»§ç»­å‘ä¸ŠæŠ›å‡ºå¼‚å¸¸
 	public static void add() throws ArithmeticException{
 		int x = 1/0;
 	}

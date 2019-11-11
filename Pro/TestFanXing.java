@@ -1,22 +1,22 @@
 package Pro;
 
 /**
-* ²»Ê¹ÓÃ·ºÐÍ£ºÒÔObject×÷ÎªÔªËØÀàÐÍÊ±£¬Ò»¸öÈÝÆ÷¿ÉÒÔ´¢´æÈÎÒâÀàÐÍµÄÔªËØ£¬
-* È±µãÊÇÐèÒªÊÖ¶¯ÀàÐÍ×ª»»£¬ÉÔÓÐ²»É÷»á³öÏÖÀàÐÍ×ª»»´íÎó
-* ·ºÐÍÈÝÆ÷£ºÖ¸¶¨ÔªËØÀàÐÍ£¬È±µãÊÇÒ»¸öÈÝÆ÷Ö»ÄÜÈÝÄÉÖ¸¶¨ÀàÐÍ
-* ÓÅµãÊÇ±àÒëÆ÷×Ô¶¯ÀàÐÍ×ª»»£¬°²È«£¬Ìá¸ßÖØÓÃÂÊ£¬Ö»Ðè¸ü¸ÄÖ¸¶¨ÔªËØÀàÐÍ¾Í¿ÉÒÔÊ¹Ä³¸öÈÝÆ÷ÈÝÄÉÄ³ÖÖÔªËØ
-* ·ºÐÍÉùÃ÷£º
+* ä¸ä½¿ç”¨æ³›åž‹ï¼šä»¥Objectä½œä¸ºå…ƒç´ ç±»åž‹æ—¶ï¼Œä¸€ä¸ªå®¹å™¨å¯ä»¥å‚¨å­˜ä»»æ„ç±»åž‹çš„å…ƒç´ ï¼Œ
+* ç¼ºç‚¹æ˜¯éœ€è¦æ‰‹åŠ¨ç±»åž‹è½¬æ¢ï¼Œç¨æœ‰ä¸æ…Žä¼šå‡ºçŽ°ç±»åž‹è½¬æ¢é”™è¯¯
+* æ³›åž‹å®¹å™¨ï¼šæŒ‡å®šå…ƒç´ ç±»åž‹ï¼Œç¼ºç‚¹æ˜¯ä¸€ä¸ªå®¹å™¨åªèƒ½å®¹çº³æŒ‡å®šç±»åž‹
+* ä¼˜ç‚¹æ˜¯ç¼–è¯‘å™¨è‡ªåŠ¨ç±»åž‹è½¬æ¢ï¼Œå®‰å…¨ï¼Œæé«˜é‡ç”¨çŽ‡ï¼Œåªéœ€æ›´æ”¹æŒ‡å®šå…ƒç´ ç±»åž‹å°±å¯ä»¥ä½¿æŸä¸ªå®¹å™¨å®¹çº³æŸç§å…ƒç´ 
+* æ³›åž‹å£°æ˜Žï¼š
 * 		T type
 * 		K key V value
 * 		E element
-* @author °²µÏ
+* @author å®‰è¿ª
 *
 */
 
 public class TestFanXing {
 
 	/**
-	 * ·ºÐÍ·½·¨
+	 * æ³›åž‹æ–¹æ³•
 	 * @param a1
 	 * @param a2
 	 * @return
@@ -33,8 +33,8 @@ public class TestFanXing {
 }
 
 /**
- * ·ºÐÍÀà£¬ÔÚÉùÃ÷Ê±Ö¸¶¨·ºÐÍÀàÐÍ
- * @author °²µÏ
+ * æ³›åž‹ç±»ï¼Œåœ¨å£°æ˜Žæ—¶æŒ‡å®šæ³›åž‹ç±»åž‹
+ * @author å®‰è¿ª
  *
  * @param <T>
  */
@@ -46,8 +46,8 @@ class test1<T>{
 }
 
 /**
- * ¼Ì³Ð·ºÐÍÀà£¬×ÓÀàµÄ·ºÐÍ·¶Î§Òª´óÓÚµÈÓÚ¸¸Àà
- * @author °²µÏ
+ * ç»§æ‰¿æ³›åž‹ç±»ï¼Œå­ç±»çš„æ³›åž‹èŒƒå›´è¦å¤§äºŽç­‰äºŽçˆ¶ç±»
+ * @author å®‰è¿ª
  *
  * @param <T>
  * @param <T1>
@@ -63,12 +63,12 @@ class test4<T,T1> extends test1<T>{
 	}
 }
 /**
- * ¼Ì³ÐÊ±²Á³ý¸¸ÀàµÄ·ºÐÍ
- * @author °²µÏ
+ * ç»§æ‰¿æ—¶æ“¦é™¤çˆ¶ç±»çš„æ³›åž‹
+ * @author å®‰è¿ª
  *
  * @param <T>
  */
-class test5 extends test1{
+class test5 extends test1<String>{
 	test5(){
 		
 	}
